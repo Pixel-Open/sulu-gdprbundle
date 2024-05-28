@@ -1,0 +1,10 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+
+  Pixel\GDPRBundle\Twig\SettingsExtension:
+    public: false
+    autowire: true
+    tags:
+      - {name: "twig.extension"}

@@ -1,0 +1,285 @@
+<?xml version="1.0" ?>
+<form xmlns="http://schemas.sulu.io/template/template"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/form-1.0.xsd"
+>
+    <key>gdpr_settings</key>
+    <properties>
+        <property name="useCookieHandling" type="checkbox">
+            <meta>
+                <title>gdpr_settings.useCookieHandling</title>
+            </meta>
+            <params>
+                <param name="default_value" value="false"/>
+            </params>
+        </property>
+        <section name="services" visibleCondition="useCookieHandling == true">
+            <meta>
+                <title>gdpr_settings.services</title>
+            </meta>
+            <properties>
+                <property name="googleTagManager" type="text_line" colspan="4">
+                    <meta>
+                        <title>gdpr_settings.googleTagManager</title>
+                    </meta>
+                </property>
+                <property name="googleAnalyticsGtagJs" type="text_line" colspan="4">
+                    <meta>
+                        <title>gdpr_settings.googleAnalyticsGtagJs</title>
+                    </meta>
+                </property>
+
+                <property name="pixelFacebook" type="text_line" colspan="4">
+                    <meta>
+                        <title>gdpr_settings.pixelFacebook</title>
+                    </meta>
+                </property>
+                <property name="bingAds" type="text_line" colspan="4">
+                    <meta>
+                        <title>gdpr_settings.bingAds</title>
+                    </meta>
+                </property>
+                <property name="googleAds" type="text_line" colspan="4">
+                    <meta>
+                        <title>gdpr_settings.googleAds</title>
+                    </meta>
+                </property>
+            </properties>
+        </section>
+        <section name="parameters" visibleCondition="useCookieHandling == true">
+            <meta>
+                <title>gdpr_settings.parameters</title>
+            </meta>
+            <properties>
+                <property name="privacyUrl" type="text_line" colspan="4">
+                    <meta>
+                        <title>gdpr_settings.privacyUrl</title>
+                    </meta>
+                </property>
+                <property name="bodyPosition" type="single_select" colspan="4">
+                    <meta>
+                        <title>gdpr_settings.bodyPosition</title>
+                    </meta>
+                    <params>
+                        <param name="default_value" value="bottom"/>
+                        <param name="values" type="collection">
+                            <param name="bottom">
+                                <meta>
+                                    <title>gdpr_settings.bottom</title>
+                                </meta>
+                            </param>
+                            <param name="top">
+                                <meta>
+                                    <title>gdpr_settings.top</title>
+                                </meta>
+                            </param>
+                        </param>
+                    </params>
+                </property>
+                <property name="hashtag" type="text_line" colspan="4">
+                    <meta>
+                        <title>gdpr_settings.hashtag</title>
+                    </meta>
+                </property>
+                <property name="cookieName" type="text_line" colspan="6">
+                    <meta>
+                        <title>gdpr_settings.cookieName</title>
+                    </meta>
+                </property>
+                <property name="orientation" type="single_select" colspan="6">
+                    <meta>
+                        <title>gdpr_settings.orientation</title>
+                    </meta>
+                    <params>
+                        <param name="default_value" value="middle"/>
+                        <param name="values" type="collection">
+                            <param name="bottom">
+                                <meta>
+                                    <title>gdpr_settings.bottom</title>
+                                </meta>
+                            </param>
+                            <param name="middle">
+                                <meta>
+                                    <title>gdpr_settings.middle</title>
+                                </meta>
+                            </param>
+                            <param name="top">
+                                <meta>
+                                    <title>gdpr_settings.top</title>
+                                </meta>
+                            </param>
+                            <param name="popup">
+                                <meta>
+                                    <title>gdpr_settings.popup</title>
+                                </meta>
+                            </param>
+                        </param>
+                    </params>
+                </property>
+                <property name="groupServices" type="checkbox" colspan="4">
+                    <meta>
+                        <title>gdpr_settings.groupServices</title>
+                    </meta>
+                    <params>
+                        <param name="default_value" value="false"/>
+                    </params>
+                </property>
+                <property name="showAlertSmall" type="checkbox" colspan="4">
+                    <meta>
+                        <title>gdpr_settings.showAlertSmall</title>
+                    </meta>
+                    <params>
+                        <param name="default_value" value="false"/>
+                    </params>
+                </property>
+                <property name="cookielist" type="checkbox" colspan="4">
+                    <meta>
+                        <title>gdpr_settings.cookielist</title>
+                    </meta>
+                    <params>
+                        <param name="default_value" value="false"/>
+                    </params>
+                </property>
+                <property name="closePopup" type="checkbox" colspan="4">
+                    <meta>
+                        <title>gdpr_settings.closePopup</title>
+                    </meta>
+                    <params>
+                        <param name="default_value" value="false"/>
+                    </params>
+                </property>
+                <property name="showIcon" type="checkbox" colspan="4">
+                    <meta>
+                        <title>gdpr_settings.showIcon</title>
+                    </meta>
+                    <params>
+                        <param name="default_value" value="true"/>
+                    </params>
+                </property>
+                <property name="iconPosition" type="single_select" colspan="4"> colspan="4"
+                    <meta>
+                        <title>gdpr_settings.iconPosition</title>
+                    </meta>
+                    <params>
+                        <param name="default_value" value="BottomRight"/>
+                        <param name="values" type="collection">
+                            <param name="BottomRight">
+                                <meta>
+                                    <title>gdpr_settings.BottomRight</title>
+                                </meta>
+                            </param>
+                            <param name="BottomLeft">
+                                <meta>
+                                    <title>gdpr_settings.BottomLeft</title>
+                                </meta>
+                            </param>
+                            <param name="TopRight">
+                                <meta>
+                                    <title>gdpr_settings.TopRight</title>
+                                </meta>
+                            </param>
+                            <param name="TopLeft">
+                                <meta>
+                                    <title>gdpr_settings.TopLeft</title>
+                                </meta>
+                            </param>
+                        </param>
+                    </params>
+                </property>
+                <property name="adblocker" type="checkbox" colspan="4">
+                    <meta>
+                        <title>gdpr_settings.adblocker</title>
+                    </meta>
+                    <params>
+                        <param name="default_value" value="false"/>
+                    </params>
+                </property>
+                <property name="denyAllCta" type="checkbox" colspan="4">
+                    <meta>
+                        <title>gdpr_settings.denyAllCta</title>
+                    </meta>
+                    <params>
+                        <param name="default_value" value="true"/>
+                    </params>
+                </property>
+                <property name="acceptAllCta" type="checkbox" colspan="4">
+                    <meta>
+                        <title>gdpr_settings.acceptAllCta</title>
+                    </meta>
+                    <params>
+                        <param name="default_value" value="true"/>
+                    </params>
+                </property>
+                <property name="highPrivacy" type="checkbox" colspan="4">
+                    <meta>
+                        <title>gdpr_settings.highPrivacy</title>
+                    </meta>
+                    <params>
+                        <param name="default_value" value="true"/>
+                    </params>
+                </property>
+                <property name="handleBrowserDNTRequest" type="checkbox" colspan="4">
+                    <meta>
+                        <title>gdpr_settings.handleBrowserDNTRequest</title>
+                    </meta>
+                    <params>
+                        <param name="default_value" value="false"/>
+                    </params>
+                </property>
+                <property name="removeCredit" type="checkbox" colspan="4">
+                    <meta>
+                        <title>gdpr_settings.removeCredit</title>
+                    </meta>
+                    <params>
+                        <param name="default_value" value="true"/>
+                    </params>
+                </property>
+                <property name="moreInfoLink" type="checkbox" colspan="4">
+                    <meta>
+                        <title>gdpr_settings.moreInfoLink</title>
+                    </meta>
+                    <params>
+                        <param name="default_value" value="true"/>
+                    </params>
+                </property>
+                <property name="useExternalCss" type="checkbox" colspan="4">
+                    <meta>
+                        <title>gdpr_settings.useExternalCss</title>
+                    </meta>
+                    <params>
+                        <param name="default_value" value="false"/>
+                    </params>
+                </property>
+                <property name="useExternalJs" type="checkbox" colspan="4">
+                    <meta>
+                        <title>gdpr_settings.useExternalJs</title>
+                    </meta>
+                    <params>
+                        <param name="default_value" value="false"/>
+                    </params>
+                </property>
+                <property name="readmoreLink" type="text_line" colspan="4">
+                    <meta>
+                        <title>gdpr_settings.readmoreLink</title>
+                    </meta>
+                </property>
+                <property name="mandatory" type="checkbox" colspan="4">
+                    <meta>
+                        <title>gdpr_settings.mandatory</title>
+                    </meta>
+                    <params>
+                        <param name="default_value" value="true"/>
+                    </params>
+                </property>
+                <property name="mandatoryCta" type="checkbox" colspan="4">
+                    <meta>
+                        <title>gdpr_settings.mandatoryCta</title>
+                    </meta>
+                    <params>
+                        <param name="default_value" value="true"/>
+                    </params>
+                </property>
+            </properties>
+        </section>
+    </properties>
+</form>

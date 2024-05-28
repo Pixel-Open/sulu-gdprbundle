@@ -1,0 +1,80 @@
+<link rel="stylesheet" href="{{ asset('bundles/gdpr/css/tarteaucitron.min.css') }}" type="text/css"/>
+<script src="{{ asset('bundles/gdpr/tarteaucitron.min.js') }}"></script>
+
+{% if setting.googleTagManager %}
+    <script type="text/javascript">
+        tarteaucitron.user.googletagmanagerId = '{{ setting.googleTagManager }}';
+        (tarteaucitron.job = tarteaucitron.job || []).push('googletagmanager');
+    </script>
+{% endif %}
+
+{% if setting.googleAnalyticsGtagJs %}
+    <script type="text/javascript">
+        tarteaucitron.user.gtagUa = '{{ setting.googleAnalyticsGtagJs }}';
+        tarteaucitron.user.gtagMore = function () {
+        };
+        (tarteaucitron.job = tarteaucitron.job || []).push('gtag');
+    </script>
+{% endif %}
+
+{% if setting.pixelFacebook %}
+    <script type="text/javascript">
+        tarteaucitron.user.facebookpixelId = '{{ setting.pixelFacebook }}';
+        tarteaucitron.user.facebookpixelMore = function () {
+        };
+        (tarteaucitron.job = tarteaucitron.job || []).push('facebookpixel');
+    </script>
+{% endif %}
+
+{% if setting.googleAds %}
+    <script type="text/javascript">
+        tarteaucitron.user.googleadsId = '{{ setting.googleAds }}';
+        (tarteaucitron.job = tarteaucitron.job || []).push('googleads');
+    </script>
+{% endif %}
+
+{% if setting.bingAds %}
+    <script type="text/javascript">
+        tarteaucitron.user.bingadsID = '{{ setting.bingAds }}';
+        (tarteaucitron.job = tarteaucitron.job || []).push('bingads');
+    </script>
+{% endif %}
+
+<script>
+    tarteaucitron.init({
+        "privacyUrl": "{{ setting.privacyUrl }}",
+        "bodyPosition": "{{ setting.bodyPosition }}",
+
+        "hashtag": "{{ setting.hashtag }}",
+        "cookieName": "{{ setting.cookieName }}",
+
+        "orientation": "{{ setting.orientation }}",
+
+        "groupServices": {{ setting.groupServices ? 'true' : 'false' }},
+
+        "showAlertSmall": {{ setting.showAlertSmall ? 'true' : 'false' }},
+        "cookieslist": {{ setting.cookielist ? 'true' : 'false' }},
+
+        "showIcon": {{ setting.showIcon ? 'true' : 'false' }},
+
+        "iconPosition": "{{ setting.iconPosition }}",
+
+        "adblocker": {{ setting.adblocker ? 'true' : 'false' }},
+
+        "DenyAllCta": {{ setting.denyAllCta ? 'true' : 'false' }},
+        "AcceptAllCta": {{ setting.acceptAllCta ? 'true' : 'false' }},
+        "highPrivacy": {{ setting.highPrivacy ? 'true' : 'false' }},
+
+        "handleBrowserDNTRequest": {{ setting.handleBrowserDNTRequest ? 'true' : 'false' }},
+
+        "removeCredit": {{ setting.removeCredit ? 'true' : 'false' }},
+        "moreInfoLink": {{ setting.moreInfoLink ? 'true' : 'false' }},
+        "useExternalCss": {{ setting.useExternalCss ? 'true' : 'false' }},
+        "useExternalJs": {{ setting.useExternalJs ? 'true' : 'false' }},
+
+        "readmoreLink": "{{ setting.readmoreLink }}",
+
+        "mandatory": {{ setting.mandatory ? 'true' : 'false' }},
+        "mandatoryCta": {{ setting.mandatoryCta ? 'true' : 'false' }}
+    });
+</script>
