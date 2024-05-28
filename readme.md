@@ -1,7 +1,8 @@
 # Sulu GDPR bundle
 
-![GitHub release (with filter)](https://img.shields.io/github/v/release/Pixel-Developpement/sulu-gdprbundle?style=for-the-badge)
-[![Dependency](https://img.shields.io/badge/sulu-2.5-cca000.svg?style=for-the-badge)](https://sulu.io/)
+![GitHub release (with filter)](https://img.shields.io/github/v/release/Pixel-Open/sulu-gdprbundle)
+[![Dependency](https://img.shields.io/badge/sulu-2.5-cca000.svg)](https://sulu.io/)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Pixel-Open_sulu-gdprbundle&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Pixel-Open_sulu-gdprbundle)
 
 ## Presentation
 
